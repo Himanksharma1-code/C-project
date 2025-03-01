@@ -1,2 +1,59 @@
-# C-project
-Here you will see the basic project of C programming made by me
+#include <stdio.h>
+int main() 
+{
+    int TEphysics, TEmaths, TEpps, TEbee, TECs, external;
+    int LEPhysics, LECeacg, LEbee, LEpps, LECs, internal;
+    int TIphysics, TImaths, TIpps, TIbee, TICs, LIphysics, LTIpps, LTIbee, LTIcs;
+    int Etotal, Itotal, Ftotal;
+    float sgpa, percentage;
+    printf("\nEnter the marks nt TEphysics out of 160: ");
+    scanf("%d", &TEphysics);
+    printf("\nEnter the marks of TEmaths out of 160: ");
+    scanf("%d", &TEmaths);
+    printf("\nEnter the marks of TEbee out of 80: ");
+    scanf("%d", &TEbee);
+    printf("\nEnter the marks of TECs out of 80: ");
+    scanf("%d", &TECs);
+    printf("\nEnter the marks of TEpps out of 80: ");
+    scanf("%d", &TEpps);
+    printf("\nEnter the marks of LECeacg out of 50: ");
+    scanf("%d", &LECeacg);
+    printf("\nEnter the marks of LEPhysics out of 30: ");
+    scanf("%d", &LEPhysics);
+    printf("\nEnter the marks of LEpps out of 60: ");
+    scanf("%d", &LEpps);
+    printf("\nEnter the marks of LECs out of 30: ");
+    scanf("%d", &LECs);
+    printf("\nEnter the marks of LEbee out of 30: ");
+    scanf("%d", &LEbee);
+    Etotal = TEphysics + TEmaths + TEbee + TECs + TEpps + LEPhysics + LEpps + LECs + LEbee + LECeacg;
+    printf("\nThe total marks of external is: %d out of 760\n", Etotal);
+    printf("\nEnter the marks of TIphysics out of 40: ");
+    scanf("%d", &TIphysics);
+    printf("\nEnter the marks of TImaths out of 40: ");
+    scanf("%d", &TImaths);
+    printf("\nEnter the marks of TIbee out of 20: ");
+    scanf("%d", &TIbee);
+    printf("\nEnter the marks of TICs out of 20: ");
+    scanf("%d", &TICs);
+    printf("\nEnter the marks of TIpps out of 20: ");
+    scanf("%d", &TIpps);
+    printf("\nEnter the marks of LIphysics out of 20: ");
+    scanf("%d", &LIphysics);
+    printf("\nEnter the marks of LTIpps out of 40: ");
+    scanf("%d", &LTIpps);
+    printf("\nEnter the marks of LTIbee out of 20: ");
+    scanf("%d", &LTIbee);
+    printf("\nEnter the marks of LTIcs out of 20: ");
+    scanf("%d", &LTIcs);
+    Itotal = TIphysics + TImaths + TIbee + TICs + TIpps + LIphysics + LTIpps + LTIbee + LTIcs;
+    printf("\nThe total marks of internal is: %d out of 290\n", Itotal);
+    Ftotal = Etotal + Itotal;
+    percentage = ((float)Ftotal / 1050) * 100; 
+    sgpa = percentage / 9.5;
+    printf("\n======== HERE YOUR FINAL RESULT ========\n");
+    printf("\n1. Total Score: %d out of 1050", Ftotal);
+    printf("\n2. Percentage: %.2f%%", percentage);
+    printf("\n3. SGPA: %.2f\n", sgpa);
+    return 0;
+}
